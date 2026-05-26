@@ -33,9 +33,50 @@ The test matrix:
 
 ## Headline Result
 
-Across the full 90-run benchmark packet, the continuity-enabled condition
-recorded lower aggregate mean elapsed time and higher file/artifact engagement
-than the baseline condition.
+Across the completed clean paired matrix, 45 baseline runs versus 45
+continuity-enabled runs, the signal held across all three agent surfaces.
+
+The strongest lift was in continuity-specific categories: runtime and
+permission gates, output/context boundaries, file grounding, and bug-triage
+orientation. The continuity-enabled condition did not buy the improvement by
+making answers longer or using more tools; it used slightly fewer tool calls and
+slightly shorter answers while covering more of the important concepts.
+
+## Scored Orientation Lift
+
+| Scored Metric | Baseline | Continuity-Enabled | Relative Change |
+| --- | ---: | ---: | ---: |
+| Concept coverage | 25.49 | 31.07 | +21.9% |
+| Runtime / permission gate coverage | 3.44 | 5.47 | +58.7% |
+| Output / context boundary coverage | 1.89 | 4.84 | +156.5% |
+| File-grounding mentions | 5.29 | 6.76 | +27.7% |
+| Strict JSON / required-shape success | 97.8% | 100.0% | +2.2 percentage points |
+| Tool calls | 22.18 | 20.71 | -6.6% |
+| Answer length | 6289 chars | 6191 chars | -1.6% |
+
+By agent surface:
+
+| Agent Surface | Concept Coverage Lift | File Mention Lift | Tool-Call Change |
+| --- | ---: | ---: | ---: |
+| Agent Surface A | +19.8% | +48.6% | -12.4% |
+| Agent Surface B | +23.9% | +22.4% | -2.7% |
+| Agent Surface C | +22.0% | flat | flat |
+
+The largest output/context boundary lift was on Agent Surface C: +275.0%.
+
+By task variant:
+
+| Task Variant | Concept Coverage Lift |
+| --- | ---: |
+| Simple onboarding | +18.3% |
+| Advanced onboarding | +18.8% |
+| Bug triage | +29.5% |
+
+## Recorded Operational Metrics
+
+The benchmark also captured raw operational parser metrics. `Elapsed seconds`
+is wall-clock harness elapsed time for each run, not a clean measure of active
+agent work time.
 
 | Metric | Baseline Mean | Continuity-Enabled Mean | Relative Change |
 | --- | ---: | ---: | ---: |
@@ -64,6 +105,7 @@ It includes:
 
 - per-run operational metrics;
 - aggregate metrics by condition, task variant, and agent surface;
+- scored orientation lift summaries;
 - headline deltas;
 - evidence-preservation counts;
 - source-record digests for private audit traceability;
@@ -78,7 +120,7 @@ The same packet is also provided as a zip:
 Zip SHA-256:
 
 ```text
-a5857cd471aa65acb35b2568f64fd43788a383de4807002d0238731ff30e351d  public-redacted-proof.zip
+d4a583dcb16fdf8b4cc61b831a82a4efd7a8462ebc72e5d06f5677c8caee0981  public-redacted-proof.zip
 ```
 
 ## Public Scope

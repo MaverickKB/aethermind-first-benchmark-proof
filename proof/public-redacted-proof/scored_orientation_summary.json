@@ -1,0 +1,83 @@
+{
+  "matrix": {
+    "baseline_runs": 45,
+    "continuity_enabled_runs": 45,
+    "agent_surfaces": 3,
+    "task_variants": 3,
+    "repeats_per_cell": 5
+  },
+  "overall_lift": {
+    "concept_coverage": {
+      "baseline": 25.49,
+      "continuity_enabled": 31.07,
+      "relative_change": "+21.9%"
+    },
+    "runtime_permission_gate_coverage": {
+      "baseline": 3.44,
+      "continuity_enabled": 5.47,
+      "relative_change": "+58.7%"
+    },
+    "output_context_boundary_coverage": {
+      "baseline": 1.89,
+      "continuity_enabled": 4.84,
+      "relative_change": "+156.5%"
+    },
+    "file_grounding_mentions": {
+      "baseline": 5.29,
+      "continuity_enabled": 6.76,
+      "relative_change": "+27.7%"
+    },
+    "strict_json_required_shape_success": {
+      "baseline": "97.8%",
+      "continuity_enabled": "100.0%",
+      "absolute_change": "+2.2 percentage points"
+    },
+    "tool_calls": {
+      "baseline": 22.18,
+      "continuity_enabled": 20.71,
+      "relative_change": "-6.6%"
+    },
+    "answer_length_chars": {
+      "baseline": 6289,
+      "continuity_enabled": 6191,
+      "relative_change": "-1.6%"
+    }
+  },
+  "by_agent_surface": [
+    {
+      "agent_surface": "Agent Surface A",
+      "concept_coverage_lift": "+19.8%",
+      "file_mentions_lift": "+48.6%",
+      "tool_call_change": "-12.4%"
+    },
+    {
+      "agent_surface": "Agent Surface B",
+      "concept_coverage_lift": "+23.9%",
+      "file_mentions_lift": "+22.4%",
+      "tool_call_change": "-2.7%"
+    },
+    {
+      "agent_surface": "Agent Surface C",
+      "concept_coverage_lift": "+22.0%",
+      "file_mentions_lift": "flat",
+      "tool_call_change": "flat",
+      "output_context_boundary_lift": "+275.0%"
+    }
+  ],
+  "by_task_variant": [
+    {
+      "task_variant": "simple_onboarding",
+      "concept_coverage_lift": "+18.3%"
+    },
+    {
+      "task_variant": "advanced_onboarding",
+      "concept_coverage_lift": "+18.8%"
+    },
+    {
+      "task_variant": "bug_triage",
+      "concept_coverage_lift": "+29.5%"
+    }
+  ],
+  "interpretation": "The strongest signal is in continuity-specific categories: gates, context boundaries, file grounding, and bug-triage orientation. The continuity-enabled condition used slightly fewer tool calls and slightly shorter answers while covering more important concepts.",
+  "timing_note": "Elapsed seconds in the operational metrics are wall-clock harness elapsed time, not a clean measure of active agent work time."
+}

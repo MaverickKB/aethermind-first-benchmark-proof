@@ -1,0 +1,8 @@
+metric,baseline,continuity_enabled,relative_change
+concept_coverage,25.49,31.07,+21.9%
+runtime_permission_gate_coverage,3.44,5.47,+58.7%
+output_context_boundary_coverage,1.89,4.84,+156.5%
+file_grounding_mentions,5.29,6.76,+27.7%
+strict_json_required_shape_success,97.8%,100.0%,+2.2 percentage points
+tool_calls,22.18,20.71,-6.6%
+answer_length_chars,6289,6191,-1.6%

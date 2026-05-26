@@ -15,12 +15,29 @@ This directory is a redacted public proof packet for the first VM-isolated Aethe
 
 ## Headline Recorded Metrics
 
-Across the official 90-run packet, the continuity-enabled condition recorded lower mean elapsed time and higher mean file/artifact mentions than the baseline condition:
+Across the official 90-run packet, the continuity-enabled condition recorded
+stronger scored orientation coverage, lower wall-clock harness elapsed time,
+and higher file/artifact mentions than the baseline condition.
+
+Scored orientation lift:
+
+- Concept coverage: 25.49 -> 31.07, +21.9%.
+- Runtime / permission gate coverage: 3.44 -> 5.47, +58.7%.
+- Output / context boundary coverage: 1.89 -> 4.84, +156.5%.
+- File-grounding mentions: 5.29 -> 6.76, +27.7%.
+- Strict JSON / required-shape success: 97.8% -> 100.0%.
+- Tool calls: 22.18 -> 20.71, -6.6%.
+- Answer length: 6289 -> 6191 chars, -1.6%.
+
+Raw operational metrics:
 
 - Mean elapsed seconds: baseline 6344.33, continuity-enabled 4580.38.
 - Relative mean elapsed change: -27.8%.
 - Mean file/artifact mentions: baseline 5.29, continuity-enabled 6.76.
 - Relative mean file/artifact mention change: +27.8%.
+
+Elapsed seconds are wall-clock harness elapsed time, not a clean measure of
+active agent work time.
 
 ## Files
 
@@ -29,6 +46,10 @@ Across the official 90-run packet, the continuity-enabled condition recorded low
 - `aggregate_metrics_by_agent_condition.csv`: aggregate metrics split by agent and condition.
 - `aggregate_metrics_by_task_condition.csv`: aggregate metrics split by task variant and condition.
 - `headline_deltas.csv`: direct baseline versus continuity-enabled mean deltas.
+- `scored_orientation_summary.csv`: scored overall continuity lift summary.
+- `scored_orientation_summary.json`: scored lift summary with matrix notes and interpretation.
+- `scored_orientation_by_agent_surface.csv`: scored lift summary by redacted agent surface.
+- `scored_orientation_by_task_variant.csv`: scored lift summary by task variant.
 - `artifact_presence_redacted.csv`: required artifact-presence booleans for each public run ID.
 - `source_record_digests_redacted.csv`: SHA-256 digests of the private copied metrics and manifest records backing each public row.
 - `benchmark_matrix_redacted.json`: public-safe benchmark structure.
