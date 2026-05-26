@@ -1,0 +1,36 @@
+{
+  "generated_at_utc": "2026-05-26T01:14:56Z",
+  "public_scope": "recorded operational metrics from the first VM-isolated benchmark only",
+  "official_runs_in_public_packet": 90,
+  "agents": [
+    "Agent Surface A",
+    "Agent Surface B",
+    "Agent Surface C"
+  ],
+  "conditions": [
+    "baseline",
+    "continuity_enabled"
+  ],
+  "task_variants": [
+    "task_a",
+    "task_b",
+    "task_c"
+  ],
+  "repeats_per_agent_condition_task": 5,
+  "agent_exit_success_runs": 90,
+  "artifact_complete_runs": 90,
+  "non_public_material_retained_privately": [
+    "terminal logs",
+    "visual evidence records",
+    "agent answers",
+    "prompt text",
+    "file lists",
+    "absolute paths",
+    "environment setup records",
+    "condition internals"
+  ],
+  "excluded_or_invalid_nonofficial_runs_retained_privately": 4,
+  "connection_success_runs": 90,
+  "visual_records_available": 90,
+  "visual_records_valid": 90
+}

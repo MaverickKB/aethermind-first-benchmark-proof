@@ -1,0 +1,43 @@
+{
+  "benchmark": "AetherMind continuity layer VM-isolated onboarding benchmark, public redacted proof packet",
+  "repository_under_test": "fixed demo repository, name redacted in public packet",
+  "run_matrix": {
+    "agents": [
+      "Agent Surface A",
+      "Agent Surface B",
+      "Agent Surface C"
+    ],
+    "conditions": [
+      "baseline",
+      "continuity_enabled"
+    ],
+    "task_variants": [
+      "task_a",
+      "task_b",
+      "task_c"
+    ],
+    "repeats_per_cell": 5,
+    "official_runs": 90
+  },
+  "recorded_metrics_included": [
+    "elapsed_seconds",
+    "event_lines",
+    "tool_call_signal_count",
+    "command_signal_count",
+    "file_artifact_mentions_count",
+    "connection_status",
+    "agent_exit_status",
+    "visual_record_available",
+    "visual_evidence_valid"
+  ],
+  "raw_material_excluded_from_public_packet": [
+    "terminal logs",
+    "visual evidence records",
+    "agent answers",
+    "prompt text",
+    "file lists",
+    "absolute paths",
+    "environment setup records",
+    "condition internals"
+  ]
+}

@@ -1,0 +1,6 @@
+metric,baseline_mean,continuity_enabled_mean,absolute_delta,relative_change_vs_baseline_percent
+elapsed_seconds,6344.33,4580.38,-1763.95,-27.8
+event_lines,1046.27,1079.36,33.09,3.2
+tool_call_signal_count,22.18,20.71,-1.47,-6.6
+command_signal_count,31.07,32.29,1.22,3.9
+file_artifact_mentions_count,5.29,6.76,1.47,27.8
